@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        {page === 'home' && <HomePage />}
+        {page === 'home' && <HomePage onNavigate={setPage}/>}
       </div>
     </>
   )
