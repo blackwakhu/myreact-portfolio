@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import HomePage from './HomePage'
+import ShoppingList from './pages/ShoppingList';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <div>
-        {page === 'home' && <HomePage onNavigate={setPage}/>}
+        {page === 'home' ? (<HomePage onNavigate={setPage}/>) : page === 'shoppingList' && (<ShoppingList/>) }
       </div>
     </>
   )
