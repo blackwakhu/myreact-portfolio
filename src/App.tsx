@@ -1,10 +1,16 @@
 import './App.css'
+import { useState } from 'react'
+import HomePage from './HomePage'
 
 function App() {
 
+  const [page, setPage] = useState('home');
+
   return (
     <>
-      <h1>Hello World</h1>
+      <div>
+        {page === 'home' && <HomePage />}
+      </div>
     </>
   )
 }
